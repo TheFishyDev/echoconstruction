@@ -27,8 +27,8 @@ html {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #1a1a1a;
-  color: #e0e0e0;
+  background: #f5f5f5;
+  color: #333333;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -50,26 +50,26 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #2a2a2a;
+  background: #e0e0e0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff6b35;
+  background: #1ABC9C;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e55a2b;
+  background: #16a085;
 }
 
 /* Selection Color */
 ::selection {
-  background: rgba(255, 107, 53, 0.3);
+  background: rgba(26, 188, 156, 0.3);
   color: white;
 }
 
 ::-moz-selection {
-  background: rgba(255, 107, 53, 0.3);
+  background: rgba(26, 188, 156, 0.3);
   color: white;
 }
 
@@ -78,7 +78,7 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #ff6b35;
+  outline: 2px solid #1ABC9C;
   outline-offset: 2px;
 }
 

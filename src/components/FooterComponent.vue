@@ -5,13 +5,12 @@
         <div class="footer-grid">
           <!-- Company Info -->
           <div class="footer-section">
-            <h3>EchoConstruction</h3>
-            <p>Building your dreams into reality with over 20 years of construction excellence.</p>
+            <h3>EconoConstruction</h3>
+            <p>Building your dreams into reality with over 70 years of construction excellence.</p>
             <div class="social-links">
-              <a href="#" class="social-link" aria-label="Facebook">📘</a>
-              <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-              <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-              <a href="#" class="social-link" aria-label="Instagram">📷</a>
+              <a href="#" class="social-link" aria-label="Facebook"><img src="/images/icons/facebook.svg" alt="Facebook"></a>
+              <a href="#" class="social-link" aria-label="LinkedIn"><img src="/images/icons/linkedin.svg" alt="LinkedIn"></a>
+              <a href="#" class="social-link" aria-label="Instagram"><img src="/images/icons/instagram.svg" alt="Instagram"></a>
             </div>
           </div>
 
@@ -38,10 +37,10 @@
           <div class="footer-section">
             <h4>Contact Info</h4>
             <div class="contact-info">
-              <p><span class="contact-icon">📞</span> (555) 123-4567</p>
-              <p><span class="contact-icon">✉️</span> info@echoconstruction.com</p>
-              <p><span class="contact-icon">📍</span> 123 Construction Ave<br>Builder City, BC 12345</p>
-              <p><span class="contact-icon">🕒</span> Mon-Fri: 8AM-6PM</p>
+              <p><span class="contact-icon"><img src="/images/icons/phone.svg" alt="Phone"></span> +27 82 800 2992</p>
+              <p><span class="contact-icon"><img src="/images/icons/mail.svg" alt="Mail"></span> andre@projectmanage.co.za</p>
+              <p><span class="contact-icon"><img src="/images/icons/map-pin.svg" alt="Map Pin"></span> 14 Hilltop Close<br>Magalies Golf Estate</p>
+              <p><span class="contact-icon"><img src="/images/icons/clock.svg" alt="Clock"></span> Mon-Fri: 7AM-5PM</p>
             </div>
           </div>
         </div>
@@ -72,14 +71,15 @@ const currentYear = computed(() => new Date().getFullYear())
 
 <style scoped>
 .footer {
-  background: #1a1a1a;
-  color: #e0e0e0;
+  background: #1ABC9C;
+  color: #666666;
   margin-top: auto;
+  border-top: 1px solid #e0e0e0;
 }
 
 .footer-content {
   padding: 3rem 0 2rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .container {
@@ -95,14 +95,14 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-section h3 {
-  color: #ff6b35;
+  color: #ffffff;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .footer-section h4 {
-  color: #ff6b35;
+  color: #ffffff;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -111,7 +111,7 @@ const currentYear = computed(() => new Date().getFullYear())
 .footer-section p {
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  color: #ccc;
+  color: #666;
 }
 
 .social-links {
@@ -140,20 +140,20 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-links a {
-  color: #ccc;
+  color: #666;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #ff6b35;
+  color: #ffffff;
 }
 
 .contact-info p {
   display: flex;
   align-items: flex-start;
   margin-bottom: 0.8rem;
-  color: #ccc;
+  color: #666;
 }
 
 .contact-icon {
@@ -194,7 +194,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-bottom-links a:hover {
-  color: #ff6b35;
+  color: #1ABC9C;
 }
 
 /* Responsive Design */

@@ -5,18 +5,17 @@
       <div class="hero-content" :class="{ 'animate': isAnimated }">
         <div class="welcome-animation">
           <h1 class="company-name">
-            <span v-for="(letter, index) in 'EchoConstruction'" :key="index" 
+            <span v-for="(letter, index) in 'EconoConstruction'" :key="index" 
                   :style="{ animationDelay: `${index * 0.1}s` }" 
                   class="letter">
               {{ letter }}
             </span>
           </h1>
           <p class="welcome-text" :class="{ 'fade-in': showWelcome }">
-            Welcome to EchoConstruction - Building Your Dreams Into Reality
+            Welcome to EconoConstruction - Building Your Dreams Into Reality
           </p>
           <div class="cta-buttons" :class="{ 'slide-up': showButtons }">
             <router-link to="/services" class="cta-button primary">Our Services</router-link>
-            <router-link to="/contact" class="cta-button secondary">Get Quote</router-link>
           </div>
         </div>
       </div>
@@ -39,8 +38,8 @@
             <router-link to="/services" class="learn-more-btn">View Our Services</router-link>
           </div>
           <div class="image-content">
-            <div class="placeholder-image">
-              <span>Construction Excellence</span>
+            <div class="award-image">
+              <img src="/images/icons/nhbrc-award.jpg" alt="NHBRC Award" />
             </div>
           </div>
         </div>
@@ -53,7 +52,7 @@
         <h2>Our Services</h2>
         <div class="services-grid">
           <div class="service-card" v-for="service in previewServices" :key="service.id">
-            <div class="service-icon">{{ service.icon }}</div>
+            <div class="service-icon"><img :src="service.icon" :alt="service.title" /></div>
             <h3>{{ service.title }}</h3>
             <p>{{ service.description }}</p>
           </div>
@@ -76,13 +75,13 @@ const showButtons = ref(false)
 const previewServices = ref([
   {
     id: 1,
-    icon: '🏗️',
+    icon: './images/icons/hotel.svg',
     title: 'Construction',
     description: 'Comprehensive construction services for residential, commercial, and industrial projects.'
   },
   {
     id: 2,
-    icon: '📋',
+    icon: './images/icons/clipboard-list.svg',
     title: 'Project Management',
     description: 'End-to-end project management ensuring timely delivery and quality results.'
   }
@@ -112,12 +111,16 @@ onMounted(() => {
 /* Hero Section */
 .hero-section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .hero-background {
@@ -126,8 +129,14 @@ onMounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-  opacity: 0.1;
+  background: url('/images/IMG_6693-900x450.jpg') center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .construction-overlay {
@@ -142,7 +151,7 @@ onMounted(() => {
 .hero-content {
   text-align: center;
   z-index: 2;
-  color: white;
+  color: #1ABC9C;
   max-width: 800px;
   padding: 0 2rem;
 }
@@ -151,8 +160,8 @@ onMounted(() => {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #ff6b35;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #1ABC9C !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .letter {
@@ -175,7 +184,7 @@ onMounted(() => {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.8s ease-out;
-  color: #e0e0e0;
+  color: #1ABC9C !important;
 }
 
 .welcome-text.fade-in {
@@ -208,35 +217,35 @@ onMounted(() => {
 }
 
 .cta-button.primary {
-  background: #ff6b35;
+  background: #1ABC9C;
   color: white;
-  border-color: #ff6b35;
+  border-color: #1ABC9C;
 }
 
 .cta-button.primary:hover {
-  background: #e55a2b;
+  background: #16a085;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 5px 15px rgba(26, 188, 156, 0.3);
 }
 
 .cta-button.secondary {
   background: transparent;
-  color: #ff6b35;
-  border-color: #ff6b35;
+  color: #1ABC9C;
+  border-color: #1ABC9C;
 }
 
 .cta-button.secondary:hover {
-  background: #ff6b35;
+  background: #1ABC9C;
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 5px 15px rgba(26, 188, 156, 0.3);
 }
 
 /* About Preview Section */
 .about-preview {
   padding: 5rem 0;
-  background: #2a2a2a;
-  color: white;
+  background: #f5f5f5;
+  color: #1ABC9C;
 }
 
 .container {
@@ -255,35 +264,51 @@ onMounted(() => {
 .text-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #ff6b35;
+  color: #1ABC9C;
 }
 
 .text-content p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  color: #e0e0e0;
+  color: #1ABC9C;
 }
 
 .learn-more-btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background: transparent;
-  color: #ff6b35;
+  color: #1ABC9C;
   text-decoration: none;
-  border: 2px solid #ff6b35;
+  border: 2px solid #1ABC9C;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 
 .learn-more-btn:hover {
-  background: #ff6b35;
+  background: #1ABC9C;
   color: white;
+}
+
+.award-image {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.award-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .placeholder-image {
   height: 300px;
-  background: linear-gradient(135deg, #333 0%, #555 100%);
+  background: linear-gradient(135deg, #1ABC9C 0%, #16a085 100%);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -295,15 +320,15 @@ onMounted(() => {
 /* Services Preview Section */
 .services-preview {
   padding: 5rem 0;
-  background: #1a1a1a;
-  color: white;
+  background: #f9f9f9;
+  color: #1ABC9C;
 }
 
 .services-preview h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #ff6b35;
+  color: #1ABC9C;
 }
 
 .services-grid {
@@ -314,18 +339,18 @@ onMounted(() => {
 }
 
 .service-card {
-  background: #2a2a2a;
+  background: #f5f5f5;
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #333;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(255, 107, 53, 0.1);
-  border-color: #ff6b35;
+  box-shadow: 0 10px 25px rgba(26, 188, 156, 0.1);
+  border-color: #1ABC9C;
 }
 
 .service-icon {
@@ -336,11 +361,11 @@ onMounted(() => {
 .service-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #ff6b35;
+  color: #1ABC9C;
 }
 
 .service-card p {
-  color: #e0e0e0;
+  color: #1ABC9C;
   line-height: 1.5;
 }
 
@@ -351,7 +376,7 @@ onMounted(() => {
 .view-all-btn {
   display: inline-block;
   padding: 1rem 2rem;
-  background: #ff6b35;
+  background: #1ABC9C;
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -360,9 +385,9 @@ onMounted(() => {
 }
 
 .view-all-btn:hover {
-  background: #e55a2b;
+  background: #16a085;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 5px 15px rgba(26, 188, 156, 0.3);
 }
 
 /* Responsive Design */

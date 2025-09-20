@@ -3,7 +3,8 @@
     <div class="nav-container">
       <!-- Logo -->
       <router-link to="/" class="nav-logo">
-        <span class="logo-text">EchoConstruction</span>
+        <img src="/images/icons/econoconstruction.png" alt="EconoConstruction Logo" class="logo-img">
+        <span class="logo-text">EconoConstruction</span>
       </router-link>
 
       <!-- Desktop Navigation -->
@@ -67,16 +68,16 @@ onUnmounted(() => {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(26, 26, 26, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #e0e0e0;
   z-index: 1000;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-  background: rgba(26, 26, 26, 0.98);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -91,18 +92,27 @@ onUnmounted(() => {
 
 .nav-logo {
   text-decoration: none;
-  color: #ff6b35;
+  color: #1ABC9C;
   font-size: 1.8rem;
   font-weight: 700;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.nav-logo:hover {
-  color: #e55a2b;
+.logo-img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover .logo-img {
+  transform: scale(1.05);
 }
 
 .logo-text {
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+  background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -115,7 +125,7 @@ onUnmounted(() => {
 }
 
 .nav-link {
-  color: #e0e0e0;
+  color: #666;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -126,13 +136,13 @@ onUnmounted(() => {
 }
 
 .nav-link:hover {
-  color: #ff6b35;
-  background: rgba(255, 107, 53, 0.1);
+  color: #16a085;
+  background: rgba(26, 160, 133, 0.1);
 }
 
 .nav-link.router-link-active {
-  color: #ff6b35;
-  background: rgba(255, 107, 53, 0.15);
+  color: #16a085;
+  background: rgba(26, 160, 133, 0.15);
 }
 
 .nav-link.router-link-active::after {
@@ -143,7 +153,7 @@ onUnmounted(() => {
   transform: translateX(-50%);
   width: 20px;
   height: 2px;
-  background: #ff6b35;
+  background: #f5f5f5;
   border-radius: 1px;
 }
 
@@ -157,7 +167,7 @@ onUnmounted(() => {
 .bar {
   width: 25px;
   height: 3px;
-  background: #e0e0e0;
+  background: #16a085;
   margin: 3px 0;
   transition: all 0.3s ease;
   border-radius: 2px;
@@ -165,7 +175,7 @@ onUnmounted(() => {
 
 .bar.active:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 6px);
-  background: #ff6b35;
+  background: #f5f5f5;
 }
 
 .bar.active:nth-child(2) {
@@ -174,7 +184,7 @@ onUnmounted(() => {
 
 .bar.active:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
-  background: #ff6b35;
+  background: #f5f5f5;
 }
 
 /* Mobile Styles */
@@ -188,7 +198,7 @@ onUnmounted(() => {
     left: -100%;
     top: 70px;
     flex-direction: column;
-    background: rgba(26, 26, 26, 0.98);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     width: 100%;
     text-align: center;

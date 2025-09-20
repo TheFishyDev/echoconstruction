@@ -75,20 +75,7 @@
                 </select>
               </div>
 
-              <div class="form-group">
-                <label for="budget">Estimated Budget</label>
-                <select id="budget" v-model="formData.budget">
-                  <option value="">Select budget range</option>
-                  <option value="under-425k">Under R425,000</option>
-                  <option value="425k-850k">R425,000 - R850,000</option>
-                  <option value="850k-1700k">R850,000 - R1,700,000</option>
-                  <option value="1700k-4250k">R1,700,000 - R4,250,000</option>
-                  <option value="4250k-8500k">R4,250,000 - R8,500,000</option>
-                  <option value="over-8500k">Over R8,500,000</option>
-                </select>
-              </div>
-
-              <div class="form-group">
+<div class="form-group">
                 <label for="message">Project Details *</label>
                 <textarea 
                   id="message" 
@@ -116,60 +103,38 @@
           <div class="contact-info-section">
             <h2>Get In Touch</h2>
             
-            <div class="contact-methods">
-              <div class="contact-method">
-                <div class="method-icon">📞</div>
-                <div class="method-content">
-                  <h4>Phone</h4>
-                  <p><a href="tel:+15551234567">(555) 123-4567</a></p>
-                  <p class="method-note">Mon-Fri: 8AM-6PM</p>
+            <div class="contact-details">
+              <div class="contact-container">
+                <div class="contact-item">
+                  <span class="contact-icon"><img src="/images/icons/phone.svg" alt="Phone"></span>
+                  <span><strong>Phone:</strong> <a href="tel:+27828002992">+27 82 800 2992</a></span>
+                </div>
+                
+                <div class="contact-item">
+                  <span class="contact-icon"><img src="/images/icons/mail.svg" alt="Mail"></span>
+                  <span><strong>Email:</strong> <a href="mailto:andre@projectmanage.co.za">andre@projectmanage.co.za</a></span>
+                </div>
+                
+                <div class="contact-item">
+                  <span class="contact-icon"><img src="/images/icons/map-pin.svg" alt="Location"></span>
+                  <span><strong>Office:</strong> 14 Hilltop Close, Magalies Golf Estate</span>
+                </div>
+                
+                <div class="contact-item">
+                  <span class="contact-icon"><img src="/images/icons/clock.svg" alt="Hours"></span>
+                  <span><strong>Hours:</strong> Mon-Fri: 7AM-5PM</span>
                 </div>
               </div>
-
-              <div class="contact-method">
-                <div class="method-icon">✉️</div>
-                <div class="method-content">
-                  <h4>Email</h4>
-                  <p><a href="mailto:info@echoconstruction.com">info@echoconstruction.com</a></p>
-                  <p class="method-note">We respond within 24 hours</p>
-                </div>
-              </div>
-
-              <div class="contact-method">
-                <div class="method-icon">📍</div>
-                <div class="method-content">
-                  <h4>Office Location</h4>
-                  <p>123 Construction Ave<br>Builder City, BC 12345</p>
-                  <p class="method-note">By appointment only</p>
-                </div>
-              </div>
-
-              <div class="contact-method">
-                <div class="method-icon">🚨</div>
-                <div class="method-content">
-                  <h4>Emergency Services</h4>
-                  <p><a href="tel:+15551234999">(555) 123-4999</a></p>
-                  <p class="method-note">24/7 Emergency repairs</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Business Hours -->
-            <div class="business-hours">
-              <h3>Business Hours</h3>
-              <div class="hours-list">
-                <div class="hours-item">
-                  <span class="day">Monday - Friday</span>
-                  <span class="time">8:00 AM - 6:00 PM</span>
-                </div>
-                <div class="hours-item">
-                  <span class="day">Saturday</span>
-                  <span class="time">9:00 AM - 4:00 PM</span>
-                </div>
-                <div class="hours-item">
-                  <span class="day">Sunday</span>
-                  <span class="time">Closed</span>
-                </div>
+              
+              <!-- Map Section -->
+              <div class="map-container">
+                <iframe 
+                  width="100%" 
+                  height="300" 
+                  style="border:0; border-radius: 8px; margin-top: 1.5rem;" 
+                  loading="lazy" 
+                  :src="'https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=14+Hilltop+Close,+Magalies+Golf+Estate,+Magaliesburg,+South+Africa'">
+                </iframe>
               </div>
             </div>
           </div>
@@ -177,18 +142,6 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-      <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-grid">
-          <div class="faq-item" v-for="faq in faqs" :key="faq.id">
-            <h4>{{ faq.question }}</h4>
-            <p>{{ faq.answer }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -201,7 +154,6 @@ const formData = reactive({
   email: '',
   phone: '',
   projectType: '',
-  budget: '',
   message: ''
 })
 
@@ -209,39 +161,6 @@ const errors = ref({})
 const isSubmitting = ref(false)
 const submitMessage = ref('')
 const submitMessageType = ref('')
-
-const faqs = ref([
-  {
-    id: 1,
-    question: 'How long does a typical construction project take?',
-    answer: 'Project timelines vary based on scope and complexity. Residential projects typically take 3-8 months, while commercial projects can range from 6-18 months. We provide detailed timelines during the planning phase.'
-  },
-  {
-    id: 2,
-    question: 'Do you provide free estimates?',
-    answer: 'Yes, we offer free initial consultations and estimates for all potential projects. Our team will assess your needs and provide a detailed quote within 48-72 hours.'
-  },
-  {
-    id: 3,
-    question: 'Are you licensed and insured?',
-    answer: 'Absolutely. EchoConstruction is fully licensed, bonded, and insured. We carry comprehensive liability insurance and workers compensation coverage for your protection.'
-  },
-  {
-    id: 4,
-    question: 'What areas do you serve?',
-    answer: 'We primarily serve the greater metropolitan area within a 50-mile radius of our main office. Contact us to confirm service availability in your specific location.'
-  },
-  {
-    id: 5,
-    question: 'Do you handle permits and inspections?',
-    answer: 'Yes, we handle all necessary permits, inspections, and regulatory compliance as part of our comprehensive project management services.'
-  },
-  {
-    id: 6,
-    question: 'What payment methods do you accept?',
-    answer: 'We accept various payment methods including checks, bank transfers, and major credit cards. Payment schedules are typically structured around project milestones.'
-  }
-])
 
 const validateForm = () => {
   errors.value = {}
@@ -254,16 +173,18 @@ const validateForm = () => {
     errors.value.lastName = 'Last name is required'
   }
   
-  if (!formData.email.trim()) {
+  if (!formData.email) {
     errors.value.email = 'Email is required'
   } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
     errors.value.email = 'Please enter a valid email address'
   }
   
+  if (formData.phone && !/^[\d\s+()-]+$/.test(formData.phone)) {
+    errors.value.phone = 'Please enter a valid phone number'
+  }
+  
   if (!formData.message.trim()) {
-    errors.value.message = 'Project details are required'
-  } else if (formData.message.trim().length < 10) {
-    errors.value.message = 'Please provide more details about your project'
+    errors.value.message = 'Please enter your message'
   }
   
   return Object.keys(errors.value).length === 0
@@ -305,13 +226,13 @@ const submitForm = async () => {
 <style scoped>
 .contact {
   min-height: 100vh;
-  background: #1a1a1a;
-  color: white;
+  background: #f5f5f5;
+  color: #666;
 }
 
 /* Hero Section */
 .contact-hero {
-  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #1ABC9C 0%, #16a085 100%);
   padding: 6rem 0 4rem;
   text-align: center;
 }
@@ -319,13 +240,13 @@ const submitForm = async () => {
 .contact-hero h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
-  color: #ff6b35;
+  color: #ffffff;
   font-weight: 700;
 }
 
 .contact-hero p {
   font-size: 1.3rem;
-  color: #e0e0e0;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -351,14 +272,14 @@ const submitForm = async () => {
 .contact-form-section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #ff6b35;
+  color: #666;
 }
 
 .contact-form {
-  background: #2a2a2a;
+  background: #f5f5f5;
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid #333;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .form-row {
@@ -374,7 +295,7 @@ const submitForm = async () => {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #e0e0e0;
+  color: #666;
   font-weight: 500;
 }
 
@@ -383,10 +304,10 @@ const submitForm = async () => {
 .form-group textarea {
   width: 100%;
   padding: 0.8rem;
-  background: #1a1a1a;
-  border: 1px solid #444;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
   border-radius: 6px;
-  color: white;
+  color: #666;
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
@@ -395,7 +316,7 @@ const submitForm = async () => {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #ff6b35;
+  border-color: #1ABC9C;
 }
 
 .form-group input.error,
@@ -419,7 +340,7 @@ const submitForm = async () => {
 .submit-btn {
   width: 100%;
   padding: 1rem;
-  background: #ff6b35;
+  background: #1ABC9C;
   color: white;
   border: none;
   border-radius: 8px;
@@ -430,7 +351,7 @@ const submitForm = async () => {
 }
 
 .submit-btn:hover:not(:disabled) {
-  background: #e55a2b;
+  background: #16a085;
   transform: translateY(-2px);
 }
 
@@ -447,13 +368,13 @@ const submitForm = async () => {
 }
 
 .submit-message.success {
-  background: rgba(34, 197, 94, 0.2);
+  background: rgba(26, 188, 156, 0.1);
   color: #22c55e;
   border: 1px solid #22c55e;
 }
 
 .submit-message.error {
-  background: rgba(239, 68, 68, 0.2);
+  background: rgba(239, 68, 68, 0.1);
   color: #ef4444;
   border: 1px solid #ef4444;
 }
@@ -462,99 +383,70 @@ const submitForm = async () => {
 .contact-info-section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #ff6b35;
+  color: #666;
 }
 
-.contact-methods {
+.contact-details {
   margin-bottom: 3rem;
 }
 
-.contact-method {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: #2a2a2a;
-  border-radius: 10px;
-  border: 1px solid #333;
+.contact-container {
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 12px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.method-icon {
-  font-size: 2rem;
+.contact-item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.map-container {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-icon {
   margin-right: 1rem;
+  font-size: 1.2rem;
+  width: 24px;
   flex-shrink: 0;
 }
 
-.method-content h4 {
-  color: #ff6b35;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+.contact-item strong {
+  color: #666;
+  font-weight: 600;
 }
 
-.method-content p {
-  color: #e0e0e0;
-  margin-bottom: 0.3rem;
-}
-
-.method-content a {
-  color: #ff6b35;
+.contact-item a {
+  color: #666;
   text-decoration: none;
 }
 
-.method-content a:hover {
+.contact-item a:hover {
   text-decoration: underline;
 }
 
-.method-note {
-  font-size: 0.9rem;
-  color: #999 !important;
-}
-
-/* Business Hours */
-.business-hours {
-  background: #2a2a2a;
-  padding: 2rem;
-  border-radius: 10px;
-  border: 1px solid #333;
-}
-
-.business-hours h3 {
-  color: #ff6b35;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.hours-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #333;
-}
-
-.hours-item:last-child {
-  border-bottom: none;
-}
-
-.day {
-  color: #e0e0e0;
-}
-
-.time {
-  color: #ff6b35;
-  font-weight: 500;
-}
 
 /* FAQ Section */
 .faq-section {
   padding: 5rem 0;
-  background: #2a2a2a;
+  background: #f5f5f5;
 }
 
 .faq-section h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #ff6b35;
+  color: #666;
 }
 
 .faq-grid {
@@ -564,20 +456,20 @@ const submitForm = async () => {
 }
 
 .faq-item {
-  background: #1a1a1a;
+  background: #f5f5f5;
   padding: 2rem;
   border-radius: 10px;
-  border: 1px solid #333;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .faq-item h4 {
-  color: #ff6b35;
+  color: #666;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
 
 .faq-item p {
-  color: #e0e0e0;
+  color: #666;
   line-height: 1.6;
 }
 

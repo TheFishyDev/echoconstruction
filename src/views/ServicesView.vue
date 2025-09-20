@@ -14,7 +14,9 @@
         <div class="services-grid">
           <div class="service-item" v-for="service in services" :key="service.id">
             <div class="service-header">
-              <div class="service-icon">{{ service.icon }}</div>
+              <div class="service-icon">
+                <img :src="service.icon" :alt="service.title" />
+              </div>
               <h3>{{ service.title }}</h3>
             </div>
             <p class="service-description">{{ service.description }}</p>
@@ -53,7 +55,6 @@
         <p>Contact us today for a free consultation and detailed quote</p>
         <div class="cta-buttons">
           <router-link to="/contact" class="cta-button primary">Get Free Quote</router-link>
-          <a href="tel:+1234567890" class="cta-button secondary">Call Now</a>
         </div>
       </div>
     </section>
@@ -66,7 +67,7 @@ import { ref } from 'vue'
 const services = ref([
   {
     id: 1,
-    icon: '🏗️',
+    icon: './images/icons/hotel.svg',
     title: 'Construction',
     description: 'Comprehensive construction services covering residential, commercial, and industrial projects from foundation to completion.',
     features: [
@@ -76,11 +77,11 @@ const services = ref([
       'Renovation & Remodeling',
       'Sustainable Building Solutions'
     ],
-    priceRange: 'Starting from R255,000'
+    priceRange: ''
   },
   {
     id: 2,
-    icon: '📋',
+    icon: './images/icons/clipboard-list.svg',
     title: 'Project Management',
     description: 'Professional project management services ensuring your construction project is delivered on time, within budget, and to the highest quality standards.',
     features: [
@@ -90,7 +91,7 @@ const services = ref([
       'Permit & Regulatory Compliance',
       'Stakeholder Communication'
     ],
-    priceRange: 'Starting from R85,000'
+    priceRange: ''
   }
 ])
 
@@ -118,7 +119,7 @@ const processSteps = ref([
   {
     id: 5,
     title: 'Project Completion',
-    description: 'Final delivery with warranty coverage and ongoing support for your new space.'
+    description: 'Final delivery.'
   }
 ])
 
@@ -131,13 +132,13 @@ const scrollToContact = () => {
 <style scoped>
 .services {
   min-height: 100vh;
-  background: #1a1a1a;
-  color: white;
+  background: #f5f5f5;
+  color: #666;
 }
 
 /* Hero Section */
 .services-hero {
-  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+  background: #1ABC9C;
   padding: 6rem 0 4rem;
   text-align: center;
 }
@@ -145,13 +146,13 @@ const scrollToContact = () => {
 .services-hero h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
-  color: #ff6b35;
+  color: #fff;
   font-weight: 700;
 }
 
 .services-hero p {
   font-size: 1.3rem;
-  color: #e0e0e0;
+  color: #fff;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -174,19 +175,17 @@ const scrollToContact = () => {
 }
 
 .service-item {
-  background: #2a2a2a;
+  background: #fff;
   border-radius: 12px;
   padding: 2rem;
-  border: 1px solid #333;
+  border: 1px solid #e0e0e0;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .service-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(255, 107, 53, 0.1);
-  border-color: #ff6b35;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .service-header {
@@ -196,18 +195,34 @@ const scrollToContact = () => {
 }
 
 .service-icon {
-  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  background: #1ABC9C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 1rem;
+  padding: 12px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .service-item h3 {
   font-size: 1.5rem;
-  color: #ff6b35;
+  color: #666;
   margin: 0;
 }
 
 .service-description {
-  color: #e0e0e0;
+  color: #666;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -221,7 +236,7 @@ const scrollToContact = () => {
 
 .service-features li {
   padding: 0.5rem 0;
-  color: #ccc;
+  color: #666;
   position: relative;
   padding-left: 1.5rem;
 }
@@ -230,7 +245,7 @@ const scrollToContact = () => {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #ff6b35;
+  color: #666;
   font-weight: bold;
 }
 
@@ -243,12 +258,12 @@ const scrollToContact = () => {
 
 .service-price {
   font-weight: 600;
-  color: #ff6b35;
+  color: #666;
   font-size: 1.1rem;
 }
 
 .contact-btn {
-  background: #ff6b35;
+  background: #1ABC9C;
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -259,13 +274,13 @@ const scrollToContact = () => {
 }
 
 .contact-btn:hover {
-  background: #e55a2b;
+  background: #16a085;
   transform: translateY(-2px);
 }
 
 /* Process Section */
 .process-section {
-  background: #2a2a2a;
+  background: #f5f5f5;
   padding: 5rem 0;
 }
 
@@ -273,7 +288,7 @@ const scrollToContact = () => {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: #ff6b35;
+  color: #666;
 }
 
 .process-steps {
@@ -290,7 +305,7 @@ const scrollToContact = () => {
 .step-number {
   width: 60px;
   height: 60px;
-  background: #ff6b35;
+  background: #1ABC9C;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -304,17 +319,17 @@ const scrollToContact = () => {
 .step-content h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #ff6b35;
+  color: #666;
 }
 
 .step-content p {
-  color: #e0e0e0;
+  color: #666;
   line-height: 1.5;
 }
 
 /* CTA Section */
 .services-cta {
-  background: #1a1a1a;
+  background: #f5f5f5;
   padding: 5rem 0;
   text-align: center;
 }
@@ -322,12 +337,12 @@ const scrollToContact = () => {
 .services-cta h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ff6b35;
+  color: #666;
 }
 
 .services-cta p {
   font-size: 1.2rem;
-  color: #e0e0e0;
+  color: #666;
   margin-bottom: 2rem;
 }
 
@@ -348,25 +363,25 @@ const scrollToContact = () => {
 }
 
 .cta-button.primary {
-  background: #ff6b35;
+  background: #1ABC9C;
   color: white;
-  border-color: #ff6b35;
+  border-color: #1ABC9C;
 }
 
 .cta-button.primary:hover {
-  background: #e55a2b;
+  background: #16a085;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button.secondary {
   background: transparent;
-  color: #ff6b35;
-  border-color: #ff6b35;
+  color: #666;
+  border-color: #1ABC9C;
 }
 
 .cta-button.secondary:hover {
-  background: #ff6b35;
+  background: #1ABC9C;
   color: white;
   transform: translateY(-2px);
 }
