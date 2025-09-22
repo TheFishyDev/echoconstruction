@@ -3,8 +3,8 @@
     <div class="nav-container">
       <!-- Logo -->
       <router-link to="/" class="nav-logo">
-        <img src="/images/icons/econoconstruction.png" alt="EconoConstruction Logo" class="logo-img">
-        <span class="logo-text">EconoConstruction</span>
+        <img src="/images/icons/econoconstruction.png" alt="Econo Construction Logo" class="logo-img">
+        <span class="logo-text">Econo Construction</span>
       </router-link>
 
       <!-- Desktop Navigation -->

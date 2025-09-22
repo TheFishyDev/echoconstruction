@@ -5,7 +5,7 @@
         <div class="footer-grid">
           <!-- Company Info -->
           <div class="footer-section">
-            <h3>EconoConstruction</h3>
+            <h3>Econo Construction</h3>
             <p>Building your dreams into reality with over 70 years of construction excellence.</p>
             <div class="social-links">
               <a href="#" class="social-link" aria-label="Facebook"><img src="/images/icons/facebook.svg" alt="Facebook"></a>

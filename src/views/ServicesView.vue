@@ -114,13 +114,8 @@ const processSteps = ref([
   {
     id: 4,
     title: 'Final Inspection',
-    description: 'Thorough inspection and walkthrough to ensure everything meets our high standards.'
+    description: 'Final Delivery and Thorough inspection with a walkthrough to ensure everything meets our high standards.'
   },
-  {
-    id: 5,
-    title: 'Project Completion',
-    description: 'Final delivery.'
-  }
 ])
 
 const scrollToContact = () => {

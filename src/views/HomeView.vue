@@ -5,14 +5,17 @@
       <div class="hero-content" :class="{ 'animate': isAnimated }">
         <div class="welcome-animation">
           <h1 class="company-name">
-            <span v-for="(letter, index) in 'EconoConstruction'" :key="index" 
-                  :style="{ animationDelay: `${index * 0.1}s` }" 
-                  class="letter">
-              {{ letter }}
+            <span v-for="(word, wordIndex) in ['Econo', 'Construction']" :key="wordIndex" class="word-group">
+              <span v-for="(letter, letterIndex) in word" :key="`${wordIndex}-${letterIndex}`" 
+                    :style="{ animationDelay: `${(wordIndex * word.length + letterIndex) * 0.1}s` }" 
+                    class="letter">
+                {{ letter }}
+              </span>
+              <span v-if="wordIndex < 1" class="space" :style="{ animationDelay: `${(wordIndex * word.length + word.length) * 0.1}s` }">&nbsp;</span>
             </span>
           </h1>
           <p class="welcome-text" :class="{ 'fade-in': showWelcome }">
-            Welcome to EconoConstruction - Building Your Dreams Into Reality
+            Welcome to Econo Construction - Building Your Dreams Into Reality
           </p>
           <div class="cta-buttons" :class="{ 'slide-up': showButtons }">
             <router-link to="/services" class="cta-button primary">Our Services</router-link>
@@ -31,7 +34,7 @@
           <div class="text-content">
             <h2>Excellence in Construction</h2>
             <p>
-              With over two decades of experience, EchoConstruction has been the trusted partner 
+              With over 7 decades of experience, Econo Construction has been the trusted partner 
               for residential and commercial construction projects. We pride ourselves on quality 
               craftsmanship, innovative solutions, and exceptional customer service.
             </p>
@@ -129,7 +132,7 @@ onMounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('/images/IMG_6693-900x450.jpg') center/cover no-repeat;
+  background: url('/images/scott-blake-ZOiGMIcfXXg-unsplash.jpg') center/cover no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -164,11 +167,23 @@ onMounted(() => {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.word-group {
+  display: inline-block;
+}
+
 .letter {
   display: inline-block;
   opacity: 0;
   transform: translateY(50px);
   animation: letterDrop 0.6s ease-out forwards;
+}
+
+.space {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: letterDrop 0.6s ease-out forwards;
+  width: 0.5em;
 }
 
 @keyframes letterDrop {
