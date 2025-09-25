@@ -1,48 +1,78 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" role="contentinfo" aria-label="Site footer">
     <div class="footer-content">
       <div class="container">
         <div class="footer-grid">
           <!-- Company Info -->
-          <div class="footer-section">
-            <h3>Econo Construction</h3>
+          <section class="footer-section" aria-labelledby="company-info-heading">
+            <h3 id="company-info-heading">Econo Construction</h3>
             <p>Building your dreams into reality with over 70 years of construction excellence.</p>
-            <div class="social-links">
-              <a href="#" class="social-link" aria-label="Facebook"><img src="/images/icons/facebook.svg" alt="Facebook"></a>
-              <a href="#" class="social-link" aria-label="LinkedIn"><img src="/images/icons/linkedin.svg" alt="LinkedIn"></a>
-              <a href="#" class="social-link" aria-label="Instagram"><img src="/images/icons/instagram.svg" alt="Instagram"></a>
-            </div>
-          </div>
+            <nav class="social-links" aria-label="Social media links">
+              <a href="https://facebook.com/econoconstruction" class="social-link" aria-label="Follow Econo Construction on Facebook" target="_blank" rel="noopener noreferrer">
+                <img src="/images/icons/facebook.svg" alt="Facebook icon" loading="lazy" width="24" height="24">
+              </a>
+              <a href="https://linkedin.com/company/econoconstruction" class="social-link" aria-label="Follow Econo Construction on LinkedIn" target="_blank" rel="noopener noreferrer">
+                <img src="/images/icons/linkedin.svg" alt="LinkedIn icon" loading="lazy" width="24" height="24">
+              </a>
+              <a href="https://instagram.com/econoconstruction" class="social-link" aria-label="Follow Econo Construction on Instagram" target="_blank" rel="noopener noreferrer">
+                <img src="/images/icons/instagram.svg" alt="Instagram icon" loading="lazy" width="24" height="24">
+              </a>
+            </nav>
+          </section>
 
           <!-- Quick Links -->
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul class="footer-links">
-              <li><router-link to="/">Home</router-link></li>
-              <li><router-link to="/services">Services</router-link></li>
-              <li><router-link to="/contact">Contact</router-link></li>
-            </ul>
-          </div>
+          <section class="footer-section" aria-labelledby="quick-links-heading">
+            <h4 id="quick-links-heading">Quick Links</h4>
+            <nav aria-label="Quick navigation">
+              <ul class="footer-links">
+                <li><router-link to="/" aria-label="Navigate to home page">Home</router-link></li>
+                <li><router-link to="/services" aria-label="View our construction services">Services</router-link></li>
+                <li><router-link to="/contact" aria-label="Contact Econo Construction">Contact</router-link></li>
+              </ul>
+            </nav>
+          </section>
 
           <!-- Services -->
-          <div class="footer-section">
-            <h4>Our Services</h4>
-            <ul class="footer-links">
-              <li><a href="#construction">Construction</a></li>
-              <li><a href="#project-management">Project Management</a></li>
-            </ul>
-          </div>
+          <section class="footer-section" aria-labelledby="services-heading">
+            <h4 id="services-heading">Our Services</h4>
+            <nav aria-label="Services navigation">
+              <ul class="footer-links">
+                <li><router-link to="/services#construction" aria-label="Learn about construction services">Construction</router-link></li>
+                <li><router-link to="/services#project-management" aria-label="Learn about project management services">Project Management</router-link></li>
+              </ul>
+            </nav>
+          </section>
 
           <!-- Contact Info -->
-          <div class="footer-section">
-            <h4>Contact Info</h4>
-            <div class="contact-info">
-              <p><span class="contact-icon"><img src="/images/icons/phone.svg" alt="Phone"></span> +27 82 800 2992</p>
-              <p><span class="contact-icon"><img src="/images/icons/mail.svg" alt="Mail"></span> andre@projectmanage.co.za</p>
-              <p><span class="contact-icon"><img src="/images/icons/map-pin.svg" alt="Map Pin"></span> 14 Hilltop Close<br>Magalies Golf Estate</p>
-              <p><span class="contact-icon"><img src="/images/icons/clock.svg" alt="Clock"></span> Mon-Fri: 7AM-5PM</p>
-            </div>
-          </div>
+          <section class="footer-section" aria-labelledby="contact-info-heading">
+            <h4 id="contact-info-heading">Contact Info</h4>
+            <address class="contact-info">
+              <p>
+                <span class="contact-icon">
+                  <img src="/images/icons/phone.svg" alt="Phone icon" loading="lazy" width="24" height="24">
+                </span>
+                <a href="tel:+27828002992" aria-label="Call Econo Construction">+27 82 800 2992</a>
+              </p>
+              <p>
+                <span class="contact-icon">
+                  <img src="/images/icons/mail.svg" alt="Email icon" loading="lazy" width="24" height="24">
+                </span>
+                <a href="mailto:andre@projectmanage.co.za" aria-label="Email Econo Construction">andre@projectmanage.co.za</a>
+              </p>
+              <p>
+                <span class="contact-icon">
+                  <img src="/images/icons/map-pin.svg" alt="Location icon" loading="lazy" width="24" height="24">
+                </span>
+                14 Hilltop Close<br>Magalies Golf Estate, Magaliesburg, 1791
+              </p>
+              <p>
+                <span class="contact-icon">
+                  <img src="/images/icons/clock.svg" alt="Clock icon" loading="lazy" width="24" height="24">
+                </span>
+                <time datetime="Mo-Fr 07:00-17:00">Mon-Fri: 7AM-5PM</time>
+              </p>
+            </address>
+          </section>
         </div>
       </div>
     </div>
@@ -51,12 +81,12 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="footer-bottom-content">
-          <p>&copy; {{ currentYear }} EchoConstruction. All rights reserved.</p>
-          <div class="footer-bottom-links">
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#terms">Terms of Service</a>
-            <a href="#sitemap">Sitemap</a>
-          </div>
+          <p>&copy; {{ currentYear }} Econo Construction. All rights reserved.</p>
+          <nav class="footer-bottom-links" aria-label="Legal links">
+            <router-link to="/privacy" aria-label="View privacy policy">Privacy Policy</router-link>
+            <router-link to="/terms" aria-label="View terms of service">Terms of Service</router-link>
+            <router-link to="/sitemap" aria-label="View site map">Sitemap</router-link>
+          </nav>
         </div>
       </div>
     </div>
@@ -71,15 +101,15 @@ const currentYear = computed(() => new Date().getFullYear())
 
 <style scoped>
 .footer {
-  background: #1ABC9C;
-  color: #666666;
+  background: #0d0d0d;
+  color: #cccccc;
   margin-top: auto;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #333333;
 }
 
 .footer-content {
   padding: 3rem 0 2rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #333333;
 }
 
 .container {
@@ -96,14 +126,14 @@ const currentYear = computed(() => new Date().getFullYear())
 
 .footer-section h3 {
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .footer-section h4 {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
@@ -133,19 +163,21 @@ const currentYear = computed(() => new Date().getFullYear())
 .footer-links {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-links li {
   margin-bottom: 0.8rem;
 }
 
-.footer-links a {
-  color: #666;
+.footer-links li a {
+  color: #cccccc;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-size: 1.4rem;
 }
 
-.footer-links a:hover {
+.footer-links li a:hover {
   color: #ffffff;
 }
 
@@ -158,14 +190,22 @@ const currentYear = computed(() => new Date().getFullYear())
 
 .contact-icon {
   margin-right: 0.8rem;
-  font-size: 1.1rem;
-  width: 20px;
+  font-size: 1.5rem;
+  width: 30px;
   flex-shrink: 0;
 }
 
+.contact-icon img,
+.social-link img {
+  filter: brightness(0) invert(1);
+}
+
+
 .footer-bottom {
+  text-align: center;
   padding: 1.5rem 0;
-  background: #0f0f0f;
+  font-size: 1.2rem;
+  color: #999999;
 }
 
 .footer-bottom-content {
@@ -204,6 +244,23 @@ const currentYear = computed(() => new Date().getFullYear())
     gap: 2.5rem;
   }
   
+  .footer-section h3 {
+    font-size: 1.8rem;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.5rem;
+  }
+  
+  .footer-links li a {
+    font-size: 1.2rem;
+  }
+  
+  .contact-icon {
+    font-size: 1.2rem;
+    width: 24px;
+  }
+  
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
@@ -215,9 +272,29 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 @media (max-width: 480px) {
+  .footer-section h3 {
+    font-size: 1.6rem;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.4rem;
+  }
+  
+  .footer-links li a {
+    font-size: 1.1rem;
+  }
+  
+  .footer-bottom {
+    font-size: 1rem;
+  }
+  
   .footer-bottom-links {
     flex-direction: column;
     gap: 1rem;
+  }
+  
+  .footer-bottom-links a {
+    font-size: 0.8rem;
   }
 }
 </style>

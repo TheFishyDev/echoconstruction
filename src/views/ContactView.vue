@@ -106,23 +106,31 @@
             <div class="contact-details">
               <div class="contact-container">
                 <div class="contact-item">
-                  <span class="contact-icon"><img src="/images/icons/phone.svg" alt="Phone"></span>
-                  <span><strong>Phone:</strong> <a href="tel:+27828002992">+27 82 800 2992</a></span>
+                  <span class="contact-icon">
+                    <img src="/images/icons/phone.svg" alt="Phone icon" loading="lazy" width="24" height="24">
+                  </span>
+                  <span><strong>Phone:</strong> <a href="tel:+27828002992" aria-label="Call Econo Construction">+27 82 800 2992</a></span>
                 </div>
                 
                 <div class="contact-item">
-                  <span class="contact-icon"><img src="/images/icons/mail.svg" alt="Mail"></span>
-                  <span><strong>Email:</strong> <a href="mailto:andre@projectmanage.co.za">andre@projectmanage.co.za</a></span>
+                  <span class="contact-icon">
+                    <img src="/images/icons/mail.svg" alt="Email icon" loading="lazy" width="24" height="24">
+                  </span>
+                  <span><strong>Email:</strong> <a href="mailto:andre@projectmanage.co.za" aria-label="Email Econo Construction">andre@projectmanage.co.za</a></span>
                 </div>
                 
                 <div class="contact-item">
-                  <span class="contact-icon"><img src="/images/icons/map-pin.svg" alt="Location"></span>
-                  <span><strong>Office:</strong> 14 Hilltop Close, Magalies Golf Estate</span>
+                  <span class="contact-icon">
+                    <img src="/images/icons/map-pin.svg" alt="Location icon" loading="lazy" width="24" height="24">
+                  </span>
+                  <span><strong>Office:</strong> 14 Hilltop Close, Magalies Golf Estate, Magaliesburg, 1791</span>
                 </div>
                 
                 <div class="contact-item">
-                  <span class="contact-icon"><img src="/images/icons/clock.svg" alt="Hours"></span>
-                  <span><strong>Hours:</strong> Mon-Fri: 7AM-5PM</span>
+                  <span class="contact-icon">
+                    <img src="/images/icons/clock.svg" alt="Business hours icon" loading="lazy" width="24" height="24">
+                  </span>
+                  <span><strong>Hours:</strong> <time datetime="Mo-Fr 07:00-17:00">Mon-Fri: 7AM-5PM</time></span>
                 </div>
               </div>
               
@@ -226,29 +234,29 @@ const submitForm = async () => {
 <style scoped>
 .contact {
   min-height: 100vh;
-  background: #f5f5f5;
-  color: #666;
+  background: #1a1a1a;
+  color: #e0e0e0;
 }
 
 /* Hero Section */
 .contact-hero {
-  background: linear-gradient(135deg, #1ABC9C 0%, #16a085 100%);
+  background: linear-gradient(135deg, #2a2a2a 0%, #333333 100%);
   padding: 6rem 0 4rem;
   text-align: center;
 }
 
 .contact-hero h1 {
-  font-size: 3.5rem;
+  font-size: 6rem;
   margin-bottom: 1rem;
   color: #ffffff;
   font-weight: 700;
 }
 
 .contact-hero p {
-  font-size: 1.3rem;
-  color: #ffffff;
-  max-width: 600px;
+  font-size: 2.2rem;
+  max-width: 800px;
   margin: 0 auto;
+  color: #cccccc;
 }
 
 .container {
@@ -270,16 +278,16 @@ const submitForm = async () => {
 
 /* Contact Form */
 .contact-form-section h2 {
-  font-size: 2rem;
+  font-size: 3.5rem;
   margin-bottom: 2rem;
-  color: #666;
+  color: #ffffff;
 }
 
 .contact-form {
-  background: #f5f5f5;
+  background: #2a2a2a;
   padding: 2rem;
   border-radius: 12px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #333333;
 }
 
 .form-row {
@@ -295,20 +303,21 @@ const submitForm = async () => {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #666;
+  color: #ffffff;
   font-weight: 500;
+  font-size: 1.8rem;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 0.8rem;
-  background: #f5f5f5;
-  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  background: #1a1a1a;
+  border: 1px solid #333333;
   border-radius: 6px;
-  color: #666;
-  font-size: 1rem;
+  color: #e0e0e0;
+  font-size: 1.8rem;
   transition: border-color 0.3s ease;
 }
 
@@ -316,7 +325,7 @@ const submitForm = async () => {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #1ABC9C;
+  border-color: #888888;
 }
 
 .form-group input.error,
@@ -327,7 +336,7 @@ const submitForm = async () => {
 
 .error-message {
   color: #ff4444;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
   display: block;
 }
@@ -339,19 +348,19 @@ const submitForm = async () => {
 
 .submit-btn {
   width: 100%;
-  padding: 1rem;
-  background: #1ABC9C;
+  padding: 1.2rem;
+  background: #333333;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .submit-btn:hover:not(:disabled) {
-  background: #16a085;
+  background: #555555;
   transform: translateY(-2px);
 }
 
@@ -368,7 +377,7 @@ const submitForm = async () => {
 }
 
 .submit-message.success {
-  background: rgba(26, 188, 156, 0.1);
+  background: rgba(34, 197, 94, 0.1);
   color: #22c55e;
   border: 1px solid #22c55e;
 }
@@ -381,9 +390,9 @@ const submitForm = async () => {
 
 /* Contact Info */
 .contact-info-section h2 {
-  font-size: 2rem;
+  font-size: 3.5rem;
   margin-bottom: 2rem;
-  color: #666;
+  color: #ffffff;
 }
 
 .contact-details {
@@ -391,10 +400,10 @@ const submitForm = async () => {
 }
 
 .contact-container {
-  background: #f5f5f5;
+  background: #2a2a2a;
   padding: 2rem;
   border-radius: 12px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #333333;
 }
 
 .contact-item {
@@ -416,19 +425,25 @@ const submitForm = async () => {
 
 .contact-icon {
   margin-right: 1rem;
-  font-size: 1.2rem;
-  width: 24px;
+  font-size: 1.8rem;
+  width: 36px;
   flex-shrink: 0;
 }
 
+.contact-icon img {
+  filter: brightness(0) invert(1);
+}
+
 .contact-item strong {
-  color: #666;
+  color: #ffffff;
   font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .contact-item a {
-  color: #666;
+  color: #cccccc;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .contact-item a:hover {
@@ -439,14 +454,14 @@ const submitForm = async () => {
 /* FAQ Section */
 .faq-section {
   padding: 5rem 0;
-  background: #f5f5f5;
+  background: #2a2a2a;
 }
 
 .faq-section h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 4rem;
   margin-bottom: 3rem;
-  color: #666;
+  color: #ffffff;
 }
 
 .faq-grid {
@@ -456,27 +471,45 @@ const submitForm = async () => {
 }
 
 .faq-item {
-  background: #f5f5f5;
+  background: #1a1a1a;
   padding: 2rem;
   border-radius: 10px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #333333;
 }
 
 .faq-item h4 {
-  color: #666;
+  color: #ffffff;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .faq-item p {
-  color: #666;
+  font-size: 1.8rem;
   line-height: 1.6;
+  color: #cccccc;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact-hero h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+  }
+  
+  .contact-hero p {
+    font-size: 1.3rem;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-info p {
+    font-size: 1.2rem;
+  }
+  
+  .contact-icon {
+    font-size: 1.4rem;
+    width: 28px;
   }
   
   .contact-grid {
@@ -484,17 +517,98 @@ const submitForm = async () => {
     gap: 3rem;
   }
   
+  .form-group label {
+    font-size: 1.2rem;
+  }
+  
+  .form-group input, .form-group select, .form-group textarea {
+    font-size: 1.2rem;
+  }
+  
+  .submit-btn {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
+  
   .form-row {
     grid-template-columns: 1fr;
+  }
+  
+  .contact-info-section h2 {
+    font-size: 2.8rem;
+  }
+  
+  .faq-section h2 {
+    font-size: 3rem;
   }
   
   .faq-grid {
     grid-template-columns: 1fr;
   }
   
+  .faq-item h4 {
+    font-size: 1.6rem;
+  }
+  
+  .faq-item p {
+    font-size: 1.2rem;
+  }
+  
   .hours-item {
     flex-direction: column;
     gap: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .contact-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info h3 {
+    font-size: 1.6rem;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-icon {
+    font-size: 1.2rem;
+    width: 24px;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+  }
+  
+  .form-group input, .form-group select, .form-group textarea {
+    font-size: 1.1rem;
+  }
+  
+  .submit-btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.6rem;
+  }
+  
+  .contact-info-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .faq-section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .faq-item h4 {
+    font-size: 1.4rem;
+  }
+  
+  .faq-item p {
+    font-size: 1.1rem;
   }
 }
 </style>

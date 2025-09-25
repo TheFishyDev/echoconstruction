@@ -27,11 +27,43 @@ html {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f5f5;
-  color: #333333;
+  background: #1a1a1a;
+  color: #e0e0e0;
+  font-size: 24px;
   line-height: 1.6;
   overflow-x: hidden;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2.8rem; }
+  h3 { font-size: 2.2rem; }
+  h4 { font-size: 1.8rem; }
+  h5 { font-size: 1.5rem; }
+  h6 { font-size: 1.3rem; }
+  
+  .main-content {
+    padding-top: 60px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 4.5rem; }
+h2 { font-size: 3.5rem; }
+h3 { font-size: 2.8rem; }
+h4 { font-size: 2.2rem; }
+h5 { font-size: 1.8rem; }
+h6 { font-size: 1.5rem; }
 
 #app {
   min-height: 100vh;
@@ -54,22 +86,22 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1ABC9C;
+  background: #666666;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #16a085;
+  background: #888888;
 }
 
 /* Selection Color */
 ::selection {
-  background: rgba(26, 188, 156, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
 }
 
 ::-moz-selection {
-  background: rgba(26, 188, 156, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
 }
 
@@ -78,7 +110,7 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #1ABC9C;
+  outline: 2px solid #888888;
   outline-offset: 2px;
 }
 
