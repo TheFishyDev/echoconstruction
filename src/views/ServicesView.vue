@@ -128,7 +128,7 @@ const scrollToContact = () => {
 .services {
   min-height: 100vh;
   background: #1a1a1a;
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 /* Hero Section */
@@ -147,7 +147,7 @@ const scrollToContact = () => {
 
 .services-hero p {
   font-size: 2rem;
-  color: #cccccc;
+  color: #ffffff;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -218,7 +218,7 @@ const scrollToContact = () => {
 }
 
 .service-description {
-  color: #cccccc;
+  color: #ffffff;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
@@ -233,7 +233,7 @@ const scrollToContact = () => {
 
 .service-features li {
   padding: 0.5rem 0;
-  color: #cccccc;
+  color: #ffffff;
   position: relative;
   padding-left: 1.5rem;
 }
@@ -322,7 +322,7 @@ const scrollToContact = () => {
 }
 
 .step-content p {
-  color: #cccccc;
+  color: #ffffff;
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -342,7 +342,7 @@ const scrollToContact = () => {
 
 .services-cta p {
   font-size: 1.6rem;
-  color: #cccccc;
+  color: #ffffff;
   margin-bottom: 2rem;
 }
 

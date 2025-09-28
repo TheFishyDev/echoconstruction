@@ -144,7 +144,7 @@
 
 .not-found-hero p {
   font-size: 1.2rem;
-  color: #cccccc;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto 2rem;
   line-height: 1.6;
@@ -256,7 +256,7 @@
 }
 
 .help-item p {
-  color: #cccccc;
+  color: #ffffff;
   line-height: 1.6;
 }
 
@@ -297,7 +297,7 @@
 
 .popular-link span {
   font-size: 0.9rem;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 .contact-section {
@@ -306,7 +306,7 @@
 
 .contact-section p {
   font-size: 1.1rem;
-  color: #cccccc;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto 2rem;
   line-height: 1.6;
@@ -331,7 +331,7 @@
 }
 
 .contact-item a {
-  color: #ff6b35;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
 }

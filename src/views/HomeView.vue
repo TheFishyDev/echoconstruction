@@ -165,7 +165,7 @@ onMounted(() => {
 .hero-content {
   text-align: center;
   z-index: 2;
-  color: #696969;
+  color: #ffffff;
   max-width: 800px;
   padding: 0 2rem;
 }
@@ -271,7 +271,7 @@ onMounted(() => {
 .about-preview {
   padding: 5rem 0;
   background: #2a2a2a;
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 .container {
@@ -297,7 +297,7 @@ onMounted(() => {
   font-size: 1.6rem;
   line-height: 1.8;
   margin-bottom: 2rem;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 .learn-more-btn {
@@ -342,14 +342,14 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
-  color: #888888;
+  color: #ffffff;
 }
 
 /* Services Preview Section */
 .services-preview {
   padding: 5rem 0;
   background: #1a1a1a;
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 .services-preview h2 {
@@ -397,7 +397,7 @@ onMounted(() => {
 }
 
 .service-card p {
-  color: #cccccc;
+  color: #ffffff;
   line-height: 1.5;
   font-size: 1.4rem;
 }
@@ -531,7 +531,7 @@ onMounted(() => {
 .nhbrc-section {
   padding: 5rem 0;
   background: #1a1a1a;
-  color: #e0e0e0;
+  color: #ffffff;
   text-align: center;
 }
 

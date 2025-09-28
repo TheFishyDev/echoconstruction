@@ -102,7 +102,7 @@ const currentYear = computed(() => new Date().getFullYear())
 <style scoped>
 .footer {
   background: #0d0d0d;
-  color: #cccccc;
+  color: #ffffff;
   margin-top: auto;
   border-top: 1px solid #333333;
 }
@@ -141,7 +141,7 @@ const currentYear = computed(() => new Date().getFullYear())
 .footer-section p {
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  color: #666;
+  color: #ffffff;
 }
 
 .social-links {
@@ -171,7 +171,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-links li a {
-  color: #cccccc;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 1.4rem;
@@ -185,7 +185,7 @@ const currentYear = computed(() => new Date().getFullYear())
   display: flex;
   align-items: flex-start;
   margin-bottom: 0.8rem;
-  color: #666;
+  color: #ffffff;
 }
 
 .contact-icon {
@@ -200,12 +200,22 @@ const currentYear = computed(() => new Date().getFullYear())
   filter: brightness(0) invert(1);
 }
 
+.contact-info a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #ffffff;
+}
+
 
 .footer-bottom {
   text-align: center;
   padding: 1.5rem 0;
   font-size: 1.2rem;
-  color: #999999;
+  color: #ffffff;
 }
 
 .footer-bottom-content {
@@ -217,7 +227,7 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-bottom p {
-  color: #999;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -227,14 +237,14 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .footer-bottom-links a {
-  color: #999;
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
 .footer-bottom-links a:hover {
-  color: #1ABC9C;
+  color: #ffffff;
 }
 
 /* Responsive Design */

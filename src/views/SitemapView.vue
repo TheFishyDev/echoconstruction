@@ -168,7 +168,7 @@
 
 .sitemap-hero p {
   font-size: 1.2rem;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 .sitemap-content {
@@ -238,7 +238,7 @@
 
 .sitemap-description {
   font-size: 0.9rem;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 .company-info {
@@ -253,7 +253,7 @@
 }
 
 .info-item p {
-  color: #cccccc;
+  color: #ffffff;
   line-height: 1.6;
   margin-bottom: 0.5rem;
 }
@@ -263,7 +263,7 @@
 }
 
 .info-item a {
-  color: #ff6b35;
+  color: #ffffff;
   text-decoration: none;
 }
 

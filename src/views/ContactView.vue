@@ -235,7 +235,7 @@ const submitForm = async () => {
 .contact {
   min-height: 100vh;
   background: #1a1a1a;
-  color: #e0e0e0;
+  color: #ffffff;
 }
 
 /* Hero Section */
@@ -256,7 +256,7 @@ const submitForm = async () => {
   font-size: 2.2rem;
   max-width: 800px;
   margin: 0 auto;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 .container {
@@ -316,7 +316,7 @@ const submitForm = async () => {
   background: #1a1a1a;
   border: 1px solid #333333;
   border-radius: 6px;
-  color: #e0e0e0;
+  color: #ffffff;
   font-size: 1.8rem;
   transition: border-color 0.3s ease;
 }
@@ -441,7 +441,7 @@ const submitForm = async () => {
 }
 
 .contact-item a {
-  color: #cccccc;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -486,7 +486,7 @@ const submitForm = async () => {
 .faq-item p {
   font-size: 1.8rem;
   line-height: 1.6;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 /* Responsive Design */

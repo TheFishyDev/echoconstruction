@@ -139,7 +139,7 @@ onUnmounted(() => {
 }
 
 .nav-link {
-  color: #e0e0e0;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.6rem;
@@ -181,7 +181,7 @@ onUnmounted(() => {
 .bar {
   width: 25px;
   height: 3px;
-  background: #e0e0e0;
+  background: #ffffff;
   margin: 3px 0;
   transition: all 0.3s ease;
   border-radius: 2px;
@@ -235,7 +235,7 @@ onUnmounted(() => {
     padding: 1.2rem 2rem;
     width: 100%;
     font-size: 1.4rem;
-    color: #e0e0e0;
+    color: #ffffff;
     border-radius: 0;
     transition: all 0.3s ease;
   }

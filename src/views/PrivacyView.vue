@@ -131,7 +131,7 @@ const currentDate = computed(() => {
 
 .privacy-hero p {
   font-size: 1.2rem;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 .privacy-content {
@@ -161,7 +161,7 @@ const currentDate = computed(() => {
 .privacy-section p {
   line-height: 1.6;
   margin-bottom: 1rem;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 .privacy-section ul {
@@ -174,7 +174,7 @@ const currentDate = computed(() => {
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #cccccc;
+  color: #ffffff;
 }
 
 .privacy-section li::before {
@@ -194,7 +194,7 @@ address p {
 }
 
 address a {
-  color: #ff6b35;
+  color: #ffffff;
   text-decoration: none;
 }
 
